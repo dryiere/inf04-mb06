@@ -8,6 +8,7 @@ import Footer from './components/Footer.jsx'
 import photos from './data/photos.json'
 import './App.css'
 
+
 function App() {
   return (
     <>
