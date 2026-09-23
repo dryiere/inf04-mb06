@@ -1,5 +1,4 @@
-// Przyciski kategorii — na razie same wyglądają, nic nie robią po kliknięciu.
-// Logika filtrowania (useState) pojawi się dopiero w MB6/MB7.
+
 function CategoryBar() {
   return (
     <div id="kategorie" className="d-flex flex-wrap gap-2 mb-4">

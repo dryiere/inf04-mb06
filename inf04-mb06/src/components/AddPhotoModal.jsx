@@ -1,6 +1,3 @@
-// Modal z formularzem "Dodaj zdjęcie" — na razie bez logiki wysyłki.
-// Stan pola "tytuł" pokazany na sztywno jako błąd (is-invalid), tak samo
-// jak w makiecie z MB3 — prawdziwa walidacja przyjdzie w MB6/MB7.
 function AddPhotoModal() {
   return (
     <div
