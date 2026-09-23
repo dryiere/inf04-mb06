@@ -10,6 +10,7 @@ import './App.css'
 
 
 function App() {
+  const [zdjecia, setZdjecia] =  useState(photos)
   return (
     <>
       <Navbar />
@@ -49,7 +50,10 @@ function App() {
 
       <main className="container">
         <CategoryBar />
-        <Gallery />
+        <main className="container">
+          <CategoryBar />
+          <Gallery photos={photos} />
+        </main>
       </main>
 
       <Footer />
