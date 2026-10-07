@@ -21,6 +21,13 @@ function PhotoCard({ id, title, description, category, image, alt }) {
         >
           Powiększ
         </button>
+        <button
+            type="button"
+            className="btn btn-outline-danger"
+            onClick={onUsun}
+          >
+            Usuń
+          </button>
       </div>
     </div>
   )
