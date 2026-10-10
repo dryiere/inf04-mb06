@@ -12,7 +12,11 @@ import './App.css'
 function App() {
   const [zdjecia, setZdjecia] =  useState(photos)
   const [aktywnaKategoria, setAktywnaKategoria] = useState('wszystkie')
-
+  function przelaczUlubione(id) {
+    setZdjecia(
+      zdjecia.map(z => (z.id === id ? { ...z, favorite: !z.favorite } : z))
+    )
+  }
   function usunZdjecie(id) {
     setZdjecia(zdjecia.filter(z => z.id !== id))
   }
@@ -62,7 +66,7 @@ function App() {
       <main className="container">
         <CategoryBar aktywna={aktywnaKategoria} onWybierz={setAktywnaKategoria} />
           {widoczne. length === 0 && (<div className="alert alert-warning">Nie znaleziono zdjęć w tej kategorii.</div>)}
-        <Gallery zdjecia={widoczne} />
+        <Gallery zdjecia={widoczne} onUsun={usunZdjecie} onPrzelacz={przelaczUlubione}/>
       </main>
 
       <Footer />
